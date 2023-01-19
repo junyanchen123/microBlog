@@ -1,0 +1,120 @@
+2023-01-17 20:54:30,275 ERROR: Exception on /edit_profile [POST] [in /Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1900, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/joannachen/Desktop/flask_proj/app/routes.py", line 95, in edit_profile
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1451, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 829, in commit
+    self._prepare_impl()
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3444, in flush
+    self._flush(objects)
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3583, in _flush
+    with util.safe_reraise():
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3544, in _flush
+    flush_context.execute()
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/sqlalchemy/orm/persistence.py", line 237, in save_obj
+    _emit_update_statements(
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/sqlalchemy/orm/persistence.py", line 1001, in _emit_update_statements
+    c = connection._execute_20(
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1705, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1572, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1943, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2124, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1900, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: UPDATE user SET image_file=? WHERE user.id = ?]
+[parameters: (<FileStorage: 'Cat03.jpg' ('image/jpeg')>, 7)]
+(Background on this error at: https://sqlalche.me/e/14/rvf5)
+2023-01-17 21:10:50,661 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-17 21:11:01,052 ERROR: Exception on /edit_profile [POST] [in /Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/joannachen/Desktop/flask_proj/app/routes.py", line 108, in edit_profile
+    return redirect(url_for('user'))
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'user'. Did you forget to specify values ['username']?
+2023-01-17 21:12:31,434 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-17 21:14:28,228 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-17 21:17:49,977 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-17 21:20:22,551 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-17 21:20:53,967 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-17 21:21:34,211 ERROR: Exception on /edit_profile [POST] [in /Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/joannachen/Desktop/flask_proj/app/routes.py", line 114, in edit_profile
+    return redirect(url_for('user',user=current_user.username))
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'user' with values ['user']. Did you forget to specify values ['username']?
+2023-01-17 21:22:28,633 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-17 21:36:18,597 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]

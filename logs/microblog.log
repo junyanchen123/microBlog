@@ -1,0 +1,23 @@
+2023-01-17 21:43:49,359 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-17 21:45:18,705 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-17 21:50:26,158 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-17 21:52:12,472 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-17 21:52:20,102 ERROR: Exception on /user/susan [GET] [in /Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/joannachen/Desktop/flask_proj/app/routes.py", line 79, in user
+    image_file = url_for('static',filename='profile_pics/' + user.image_file)
+TypeError: can only concatenate str (not "NoneType") to str
+2023-01-17 21:55:11,225 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-17 21:59:01,638 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-17 22:00:37,325 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-17 22:08:16,255 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
