@@ -13,4 +13,4 @@ class Config(object):
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     ADMINS = ['hello@microblog.io']
     POSTS_PER_PAGE=3
-    UPLOAD_FOLDER = 'app/static/uploads'
+    LOG_TO_STDOUT = os.environ.get('LOG_TO_STDOUT')
