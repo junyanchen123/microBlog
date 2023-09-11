@@ -1,4 +1,8 @@
-2023-01-17 21:36:30,987 ERROR: Exception on /edit_profile [POST] [in /Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py:1741]
+2023-01-17 21:43:49,359 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-17 21:45:18,705 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-17 21:50:26,158 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-17 21:52:12,472 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-17 21:52:20,102 ERROR: Exception on /user/susan [GET] [in /Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py:1741]
 Traceback (most recent call last):
   File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
     response = self.full_dispatch_request()
@@ -10,19 +14,50 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
   File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/Users/joannachen/Desktop/flask_proj/app/routes.py", line 114, in edit_profile
-    return redirect(url_for('user/<username>',user=current_user.username))
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/helpers.py", line 256, in url_for
-    return current_app.url_for(
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 2031, in url_for
-    return self.handle_url_build_error(error, endpoint, values)
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 2020, in url_for
-    rv = url_adapter.build(  # type: ignore[union-attr]
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'user/<username>' with values ['user']. Did you mean 'user' instead?
-2023-01-17 21:39:30,273 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
-2023-01-17 21:39:32,458 ERROR: Exception on /user/jyy [GET] [in /Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py:1741]
+  File "/Users/joannachen/Desktop/flask_proj/app/routes.py", line 79, in user
+    image_file = url_for('static',filename='profile_pics/' + user.image_file)
+TypeError: can only concatenate str (not "NoneType") to str
+2023-01-17 21:55:11,225 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-17 21:59:01,638 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-17 22:00:37,325 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-17 22:08:16,255 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-19 16:08:57,505 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-19 16:08:57,506 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:71]
+2023-01-19 16:08:57,506 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:71]
+2023-01-19 16:09:10,382 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-19 16:09:10,382 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:71]
+2023-01-19 16:09:10,382 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:71]
+2023-01-19 17:12:31,294 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-01-19 17:12:31,294 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:71]
+2023-01-19 17:12:31,294 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:71]
+2023-07-27 10:20:10,368 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-07-27 10:20:10,369 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:71]
+2023-07-27 10:20:10,369 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:71]
+2023-09-07 10:29:44,865 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+2023-09-07 10:29:44,865 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:71]
+2023-09-07 10:29:44,865 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:71]
+2023-09-07 10:30:37,989 ERROR: Exception on /reset_password_request [POST] [in /Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask_mail.py", line 492, in send
+    message.send(connection)
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask_mail.py", line 427, in send
+    connection.send(self)
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask_mail.py", line 188, in send
+    self.host.sendmail(sanitize_address(envelope_from or message.sender),
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/smtplib.py", line 872, in sendmail
+    self.ehlo_or_helo_if_needed()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/smtplib.py", line 611, in ehlo_or_helo_if_needed
+    if not (200 <= self.ehlo()[0] <= 299):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/smtplib.py", line 451, in ehlo
+    self.putcmd(self.ehlo_msg, name or self.local_hostname)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/smtplib.py", line 378, in putcmd
+    self.send(f'{s}{CRLF}')
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/smtplib.py", line 365, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
     response = self.full_dispatch_request()
@@ -32,85 +67,22 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/Users/joannachen/Desktop/flask_proj/app/routes.py", line 80, in user
-    return render_template('user.html',user=user,posts=posts.items,form=form,image_file=image_file)
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
-    return _render(app, template, context)
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
-    rv = template.render(context)
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/Users/joannachen/Desktop/flask_proj/app/templates/user.html", line 1, in top-level template code
-    {% extends 'base.html' %}
-  File "/Users/joannachen/Desktop/flask_proj/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
-    {% block content -%}
-  File "/Users/joannachen/Desktop/flask_proj/app/templates/base.html", line 43, in block 'content'
-    {% block app_content %}{% endblock %}
-  File "/Users/joannachen/Desktop/flask_proj/app/templates/user.html", line 15, in block 'app_content'
-    <p><a href="{{ url_for('edit_profile') }}">Edit your profile</a></p>
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 2031, in url_for
-    return self.handle_url_build_error(error, endpoint, values)
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 2020, in url_for
-    rv = url_adapter.build(  # type: ignore[union-attr]
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'edit_profile'. Did you forget to specify values ['username']?
-2023-01-17 21:40:17,675 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
-2023-01-17 21:40:20,664 ERROR: Exception on /user/jyy [GET] [in /Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py:1741]
-Traceback (most recent call last):
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/Users/joannachen/Desktop/flask_proj/app/routes.py", line 80, in user
-    return render_template('user.html',user=user,posts=posts.items,form=form,image_file=image_file)
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
-    return _render(app, template, context)
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
-    rv = template.render(context)
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/Users/joannachen/Desktop/flask_proj/app/templates/user.html", line 1, in top-level template code
-    {% extends 'base.html' %}
-  File "/Users/joannachen/Desktop/flask_proj/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
-    {% block content -%}
-  File "/Users/joannachen/Desktop/flask_proj/app/templates/base.html", line 43, in block 'content'
-    {% block app_content %}{% endblock %}
-  File "/Users/joannachen/Desktop/flask_proj/app/templates/user.html", line 15, in block 'app_content'
-    <p><a href="{{ url_for('edit_profile/<username>') }}">Edit your profile</a></p>
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 2031, in url_for
-    return self.handle_url_build_error(error, endpoint, values)
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask/app.py", line 2020, in url_for
-    rv = url_adapter.build(  # type: ignore[union-attr]
-  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'edit_profile/<username>'. Did you mean 'edit_profile' instead?
-2023-01-17 21:41:57,043 INFO: Microblog startup [in /Users/joannachen/Desktop/flask_proj/app/__init__.py:51]
+  File "/Users/joannachen/Desktop/flask_proj/app/routes.py", line 182, in reset_password_request
+    send_password_reset_email(user)
+  File "/Users/joannachen/Desktop/flask_proj/app/email.py", line 14, in send_password_reset_email
+    send_email('[Microblog] Reset Your Password',
+  File "/Users/joannachen/Desktop/flask_proj/app/email.py", line 10, in send_email
+    mail.send(msg)
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask_mail.py", line 491, in send
+    with self.connect() as connection:
+  File "/Users/joannachen/Desktop/flask_proj/venv/lib/python3.10/site-packages/flask_mail.py", line 152, in __exit__
+    self.host.quit()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/smtplib.py", line 1004, in quit
+    res = self.docmd("quit")
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/smtplib.py", line 431, in docmd
+    self.putcmd(cmd, args)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/smtplib.py", line 378, in putcmd
+    self.send(f'{s}{CRLF}')
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/smtplib.py", line 365, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
