@@ -11,5 +11,5 @@ This platform serves as a curated space for individuals worldwide to share their
 ## Demo
 https://micro-blog-junyanc.replit.app/
 
-you can use existing user to login if you need.<br />
-**username:** lucy **password:** pass1234
+you can use existing user to login or you can sign up your own account.<br />
+**Username:** Junyan **Password:** pass1234
